@@ -6,7 +6,8 @@ import (
 	"strings"
 )
 
-func testBufReader() {
+//ReadSlice 读取时有一个curpos指针, 读取后对象的值被改变了
+func testReadSlice() {
 	reader := bufio.NewReader(strings.NewReader("http://studygolang.com. \nIt is the home of gophers"))
 
 	line, _ := reader.ReadSlice('\n')
