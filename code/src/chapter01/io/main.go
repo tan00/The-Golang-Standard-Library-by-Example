@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"util"
+
+	"util" //export GOPAT="/d/1src/go/The-Golang-Standard-Library-by-Example/code"
 )
 
 func main() {
@@ -17,6 +18,11 @@ MAINFOR:
 		fmt.Println("*******请选择示例：*********")
 		fmt.Println("1 表示 io.Reader 示例")
 		fmt.Println("2 表示 io.ByteReader/ByteWriter 示例")
+		fmt.Println("3 表示 ReadDir 示例")
+		fmt.Println("4 表示 Formatter接口")
+		fmt.Println("5 表示 Scanf")
+		fmt.Println("6 表示 bufio.ReadSlice")
+
 		fmt.Println("q 退出")
 		fmt.Println("***********************************")
 
@@ -28,6 +34,16 @@ MAINFOR:
 			ReaderExample()
 		case "2":
 			ByteRWerExample()
+		case "3":
+			fmt.Println("在当前目录遍历, 遍历深度为1")
+			ListAllFile(".", 1)
+		case "4":
+			sb := Person{"james", 18, 1}
+			fmt.Printf("Person %%L is %L \n  Person %%s is %s   Person %%v is %v  ", sb, sb, sb)
+		case "5":
+			testScanf()
+		case "6":
+			testReadSlice()
 		case "q":
 			fmt.Println("程序退出！")
 			break MAINFOR
