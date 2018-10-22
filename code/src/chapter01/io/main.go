@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"util" //export GOPAT="/d/1src/go/The-Golang-Standard-Library-by-Example/code"
+	"util" //export GOPATH="/d/1src/go/The-Golang-Standard-Library-by-Example/code"
 )
 
 func main() {
@@ -22,6 +22,7 @@ MAINFOR:
 		fmt.Println("4 表示 Formatter接口")
 		fmt.Println("5 表示 Scanf")
 		fmt.Println("6 表示 bufio.ReadSlice")
+		fmt.Println("7 表示 bufio.ReadString")
 
 		fmt.Println("q 退出")
 		fmt.Println("***********************************")
@@ -44,6 +45,9 @@ MAINFOR:
 			testScanf()
 		case "6":
 			testReadSlice()
+		case "7":
+			testReadBytes()
+
 		case "q":
 			fmt.Println("程序退出！")
 			break MAINFOR
