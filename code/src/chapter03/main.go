@@ -16,10 +16,8 @@ MAINFOR:
 	for {
 		fmt.Println("")
 		fmt.Println("*******请选择示例：*********")
-		fmt.Println("1 表示 stirngs 示例")
-		fmt.Println("2 表示 bytes 示例")
-		fmt.Println("3 表示 strconv 示例")
-		fmt.Println("4 表示 regexp 示例")
+		fmt.Println("1 表示 sort 示例")
+		fmt.Println("2 表示 heap 示例")
 
 		fmt.Println("q 退出")
 		fmt.Println("***********************************")
@@ -29,13 +27,10 @@ MAINFOR:
 
 		switch ch {
 		case "1":
-			TestStrings()
+			TestSort()
+			TestSort2()
 		case "2":
-			TestBytes()
-		case "3":
-			TestStrConv()
-		case "4":
-			TestRegExp()
+			TestHeap()
 
 		case "q":
 			fmt.Println("程序退出！")
