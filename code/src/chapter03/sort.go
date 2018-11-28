@@ -6,6 +6,17 @@ import (
 	"strconv"
 )
 
+//自定义类型排序 需要实现 sort.Interface 接口
+// type Interface interface {
+// 	// Len is the number of elements in the collection.
+// 	Len() int
+// 	// Less reports whether the element with
+// 	// index i should sort before the element with index j.
+// 	Less(i, j int) bool
+// 	// Swap swaps the elements with indexes i and j.
+// 	Swap(i, j int)
+// }
+
 //内置类型排序
 func TestSort() {
 	numSlice1 := []int{3, 34, 6, 56, 7, 787, 68, 463}
@@ -22,17 +33,6 @@ func TestSort() {
 	//func IntsAreSorted(a []int) bool { return IsSorted(IntSlice(a)) }
 	fmt.Println(sort.IntsAreSorted(numSlice2))
 }
-
-//自定义类型排序 需要实现 sort.Interface 接口
-// type Interface interface {
-// 	// Len is the number of elements in the collection.
-// 	Len() int
-// 	// Less reports whether the element with
-// 	// index i should sort before the element with index j.
-// 	Less(i, j int) bool
-// 	// Swap swaps the elements with indexes i and j.
-// 	Swap(i, j int)
-// }
 
 type Person struct {
 	age  int
